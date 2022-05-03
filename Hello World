@@ -1,0 +1,22 @@
+//Code license to avoid warnings//
+// SPDX-License-Identifier: GPL-3.0 
+//Solidity version//
+pragma solidity 0.8.13;
+
+contract HelloWorld {
+
+    //this will get initialised to 0!
+    uint public storednumber;
+
+    //the function changes the value of stored number
+    //(uint _storednumber) allows us to pass/input a new number to store
+    function store(uint _storednumber) public{
+        //the storednumber will now equal the number passed/inputted above
+        storednumber = _storednumber;
+    }
+
+    // the stored number with variable type uint is retrieved by returning for public view 
+    function retrieve()public view returns (uint) {
+        return storednumber;
+    } 
+}
